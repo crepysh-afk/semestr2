@@ -14,10 +14,10 @@ Cone::Cone(double cx, double cy, double cz, double r, double h)
 
 void Cone::validate() const {
     if (radius <= 0)
-        throw invalid_argument("Радиус должен быть больше 0.");
+        throw invalid_argument("Radius must be greater than 0.");
 
     if (height <= 0)
-        throw invalid_argument("Высота должна быть больше 0.");
+        throw invalid_argument("Height must be greater than 0.");
 }
 
 double Cone::slantHeight() const {
@@ -30,8 +30,8 @@ double Cone::surfaceArea() const {
 }
 
 void Cone::print() const {
-    cout << "Центр: (" << x << ", " << y << ", " << z << ")" << endl;
-    cout << "Радиус: " << radius << endl;
-    cout << "Высота: " << height << endl;
-    cout << "Площадь поверхности: " << surfaceArea() << endl;
+    cout << "Center:: (" << x << ", " << y << ", " << z << ")" << endl;
+    cout << "Radius: " << radius << endl;
+    cout << "Height: " << height << endl;
+    cout << "Surface Area: " << surfaceArea() << endl;
 }
