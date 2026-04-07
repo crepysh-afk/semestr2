@@ -7,8 +7,11 @@ int main() {
     setlocale(LC_ALL, "RU");
 
     try {
-        double x,y,z;
-        double radius, height;
+        double x = 0;
+        double y = 0;
+        double z = 0;
+        double radius = 0;
+        double height = 0;
 
         cin>>x >>y >>z;
         cin >> radius;
