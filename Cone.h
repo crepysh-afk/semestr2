@@ -6,19 +6,26 @@
  * @brief Класс, описывающий геометрический конус.
  * Конус задаётся координатами центра основания,
  * радиусом основания и высотой.
- * @brief x - координата х
- * @brief y - координата y
- * @brief z - координата z
- * @brief radius - радиус конуса
- * @brief height - высота конуса
- * @brief validate - проверка корректности данных ввода
  */
 class Cone {
 private:
+/**
+* @brief x - координата х
+* @brief y - координата y
+* @brief z - координата z
+*/
     double x, y, z;
+/**
+* @brief radius - радиус конуса
+*/
     double radius;
+/**
+* @brief height - высота конуса
+*/
     double height;
-
+/**
+* @brief validate - проверка корректности данных ввода
+*/
     void validate() const;   
 
 public:
