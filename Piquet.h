@@ -13,7 +13,7 @@ private:
     bool isStandard;     ///< Стандартный ли пикет
 
 public:
-    Piquet(int number, double shift, bool isStandard = true);
+    Piquet(const int number,const double shift,const bool isStandard = true);
 
     std::string ToString() const;
 
