@@ -23,7 +23,7 @@ public:
      * @param start Начало уклона
      * @param end Конец уклона
      */
-    Slope(double value, const Piquet& start, const Piquet& end);
+    Slope(const double value, const Piquet& start, const Piquet& end);
 
     std::string ToString() const override;
 
