@@ -11,9 +11,18 @@
 class Slope : public Restriction
 {
 private:
-    double value;   ///< Значение уклона (не более 50)
-    Piquet start;   ///< Начало уклона
-    Piquet end;     ///< Конец уклона
+/**
+*@brief value - значение уклона
+*/
+    double value;
+/**
+*@brief start - начало уклона
+*/
+    Piquet start;
+/**
+*@brief end - конец уклона
+*/
+    Piquet end;  
 
 public:
 
@@ -25,9 +34,22 @@ public:
      */
     Slope(const double value, const Piquet& start, const Piquet& end);
 
+/**
+*@brief Преобразует уклон в строку
+*@return Строковое описание уклона
+*/
     std::string ToString() const override;
-
+/**
+*@brief Статический метод чтения объекта из потока
+*@param is Поток ввода
+*@return созданный объект Slope
+*/
     static Slope Read(std::istream& is);
-
+/**
+*@brief Перегрузка оператора вывода
+*@param os поток вывода
+*@param s объект уклона
+*@return поток вывода
+*/
     friend std::ostream& operator<<(std::ostream& os, const Slope& s);
 };
