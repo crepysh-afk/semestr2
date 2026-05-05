@@ -2,11 +2,11 @@
 #include <sstream>
 #include <stdexcept>
 
-Slope::Slope(double value, const Piquet& start, const Piquet& end)
+Slope::Slope(const double value, const Piquet& start, const Piquet& end)
     : value(value), start(start), end(end)
 {
     if (value > 50)
-        throw std::invalid_argument("Slope value cannot exceed 50‰.");
+        throw std::invalid_argument("Slope value cannot exceed 50â€°.");
 
     if (end < start)
         throw std::invalid_argument("End piquet must be greater than start.");
@@ -15,7 +15,7 @@ Slope::Slope(double value, const Piquet& start, const Piquet& end)
 std::string Slope::ToString() const
 {
     std::ostringstream ss;
-    ss << "Slope: " << value << "‰, from "
+    ss << "Slope: " << value << "â€°, from "
         << start.ToString() << " to "
         << end.ToString();
     return ss.str();
