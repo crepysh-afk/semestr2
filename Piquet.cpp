@@ -2,7 +2,7 @@
 #include <sstream>
 #include <stdexcept>
 
-Piquet::Piquet(int number, double shift, bool isStandard)
+Piquet::Piquet(const int number,const double shift,const bool isStandard)
     : number(number), shift(shift), isStandard(isStandard)
 {
     if (shift < 0)
@@ -12,7 +12,7 @@ Piquet::Piquet(int number, double shift, bool isStandard)
 std::string Piquet::ToString() const
 {
     std::ostringstream ss;
-    ss << "ÏÊ " << number << "+" << shift;
+    ss << "ÃÃŠ " << number << "+" << shift;
     return ss.str();
 }
 
