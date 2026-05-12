@@ -4,7 +4,7 @@
 
 /* ================= Node ================= */
 
-DoublyLinkedList::Node::Node(int value)
+DoublyLinkedList::Node::Node(const int value)
     : data(value), prev(nullptr), next(nullptr)
 {
 }
@@ -16,7 +16,7 @@ DoublyLinkedList::DoublyLinkedList()
 {
 }
 
-DoublyLinkedList::DoublyLinkedList(std::initializer_list<int> list)
+DoublyLinkedList::DoublyLinkedList(const std::initializer_list<int> list)
     : head(nullptr), tail(nullptr), size(0)
 {
     for (int value : list)
@@ -50,7 +50,7 @@ void DoublyLinkedList::clear()
 
 /* ================= Public ================= */
 
-void DoublyLinkedList::push_back(int value)
+void DoublyLinkedList::push_back(const int value)
 {
     Node* newNode = new Node(value);
 
@@ -68,7 +68,7 @@ void DoublyLinkedList::push_back(int value)
     size++;
 }
 
-bool DoublyLinkedList::contains(int value) const
+bool DoublyLinkedList::contains(const int value) const
 {
     Node* current = head;
 
@@ -83,7 +83,7 @@ bool DoublyLinkedList::contains(int value) const
     return false;
 }
 
-void DoublyLinkedList::remove(int value)
+void DoublyLinkedList::remove(const int value)
 {
     Node* current = head;
 
@@ -110,7 +110,7 @@ void DoublyLinkedList::remove(int value)
     }
 }
 
-void DoublyLinkedList::modify(int oldValue, int newValue)
+void DoublyLinkedList::modify(const int oldValue, const int newValue)
 {
     Node* current = head;
 
