@@ -29,7 +29,7 @@ private:
         Node* next;
 
 
-        Node(int value);
+        Node(const int value);
     };
 
     /**
@@ -58,7 +58,7 @@ public:
     /**
      * @brief Конструктор со списком инициализации.
      */
-    DoublyLinkedList(std::initializer_list<int> list);
+    DoublyLinkedList(const std::initializer_list<int> list);
 
     /**
      * @brief Деструктор.
@@ -68,22 +68,22 @@ public:
     /**
      * @brief Добавить элемент в конец.
      */
-    void push_back(int value);
+    void push_back(const int value);
 
     /**
      * @brief Проверка наличия элемента.
      */
-    bool contains(int value) const;
+    bool contains(const int value) const;
 
     /**
      * @brief Удалить первое вхождение элемента.
      */
-    void remove(int value);
+    void remove(const int value);
 
     /**
      * @brief Заменить значение oldValue на newValue.
      */
-    void modify(int oldValue, int newValue);
+    void modify(const int oldValue,const int newValue);
 
     /**
      * @brief Проверка на пустоту.
@@ -103,5 +103,5 @@ public:
     /**
      * @brief Оператор вывода.
      */
-    friend std::ostream& operator<<(std::ostream& os, const DoublyLinkedList& list);
+    friend std::ostream& operator<<(const std::ostream& os, const DoublyLinkedList& list);
 };
